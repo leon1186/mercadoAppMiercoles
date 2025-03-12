@@ -19,11 +19,11 @@ while opcion != 5:
     opcion=int(input("Digita una opcion del menu: "))
 
     if opcion == 1:
-        print("Creando la lista")
+        #print("Creando la lista")
         #Poblando listas y diccionarios en python 
 
         #Asignando claves a un diccionario
-        producto["id"]=5
+        producto["id"]=5 #generar de forma alatoria este numero (unico)
         producto["nombre"]=input("Digita el nombre del producto: ")
         producto["presentacion"]=input(" Digita la presentacion del producto: ")
         producto["cantidad"]=int(input("Digita la cantidad: "))
@@ -31,16 +31,36 @@ while opcion != 5:
 
         #Asignando a una lista un diccionario
         productos.append(producto)
-        print(productos)
+        #print(productos)
 
 
     elif opcion == 2:
-        print("Mostrando la lista")
+        #recorrer una lista``
+        for productoIterado in productos:
+            print(productoIterado["nombre"])
+            print(productoIterado["precio"])
     elif opcion == 3:
-        print("Modificando la lista")
+        #preguntarle al usuario cual producto quiere cambiar 
+        idProductoABuscar=int(input("cual es el id del producto a modificar "))
+        #recorrer la lista para buscar o identificar 
+        for productobuscado in productos:
+            if idProductoABuscar ==productobuscado["id"]:#trae el primer id y compararlo con idProductoABuscar.
+                print("encontrado")
+            else:
+                print("no encontrado")   
+
+                 
+
+        #acondicionar este pedazo   
+        #modificar la o las propiedades pedidas
+
     elif opcion == 4:
         print("Retirando un producto")
     else:
         print("Opcion invalida")
+
+    #como cuando genero un numero que sea unico.
+    #cuando agrego cosas en una lista esas cosas no se sobreescriban.
+    #recorre, lista diccionario, 
     
     
