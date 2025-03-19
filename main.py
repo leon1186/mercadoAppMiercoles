@@ -1,3 +1,4 @@
+import random 
 #Programa para gestion de productos
 #En una lista de mercado
 nombreUsuario=None
@@ -23,7 +24,9 @@ while opcion != 5:
         #Poblando listas y diccionarios en python 
 
         #Asignando claves a un diccionario
-        producto["id"]=5 #generar de forma alatoria este numero (unico)
+      
+        producto["id"]=random.randint(1, 100)
+         #generar de forma alatoria este numero (unico)
         producto["nombre"]=input("Digita el nombre del producto: ")
         producto["presentacion"]=input(" Digita la presentacion del producto: ")
         producto["cantidad"]=int(input("Digita la cantidad: "))
@@ -31,6 +34,8 @@ while opcion != 5:
 
         #Asignando a una lista un diccionario
         productos.append(producto)
+        print(producto)
+        
         #print(productos)
 
 
@@ -39,6 +44,7 @@ while opcion != 5:
         for productoIterado in productos:
             print(productoIterado["nombre"])
             print(productoIterado["precio"])
+            print(productoIterado["id"])
     elif opcion == 3:
         #preguntarle al usuario cual producto quiere cambiar 
         idProductoABuscar=int(input("cual es el id del producto a modificar "))
@@ -64,3 +70,4 @@ while opcion != 5:
     #recorre, lista diccionario, 
     
     
+print(producto)
